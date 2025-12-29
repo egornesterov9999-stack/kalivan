@@ -1,0 +1,14 @@
+{
+  "name": "kalivan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord-like chat application",
+  "scripts": {
+    "install-all": "cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuthStore } from '../store/auth';
 import { useChatStore } from '../store/chat';
 import { FiPlus, FiLogOut, FiSettings, FiHash, FiVolume2 } from 'react-icons/fi';
-import Sidebar from '../components/Sidebar';
 import ChatWindow from '../components/ChatWindow';
 import ServerModal from '../components/ServerModal';
 
 export default function Dashboard() {
   const { user, logout } = useAuthStore();
-  const { servers, channels, currentServer, currentChannel, fetchServers, fetchChannels } = useChatStore();
+  const { servers, channels, currentServer, fetchServers, fetchChannels } = useChatStore();
   const [showServerModal, setShowServerModal] = useState(false);
   const [selectedChannel, setSelectedChannel] = useState<string | null>(null);
 

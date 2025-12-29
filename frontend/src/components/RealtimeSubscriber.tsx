@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { useChatStore } from '../store/chat';
 
@@ -20,7 +20,7 @@ export default function RealtimeSubscriber({ channelId }: RealtimeSubscriberProp
           table: 'messages',
           filter: `channel_id=eq.${channelId}`,
         },
-        (payload: any) => {
+        (_payload: any) => {
           // Refresh messages when new message is inserted
           useChatStore.getState().fetchMessages(channelId);
         }

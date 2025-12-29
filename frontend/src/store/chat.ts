@@ -48,7 +48,7 @@ interface ChatStore {
   setCurrentChannel: (channelId: string) => void;
 }
 
-export const useChatStore = create<ChatStore>((set, get) => ({
+export const useChatStore = create<ChatStore>((set) => ({
   servers: [],
   channels: [],
   messages: [],

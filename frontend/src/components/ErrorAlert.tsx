@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiAlertCircle, FiX } from 'react-icons/fi';
 
 interface ErrorAlertProps {
